@@ -66,7 +66,7 @@ if __name__ == "__main__":
     choice = input("Enter '1' for text files or '2' for Excel files: ")
     
     if choice == "1" or choice == "2":
-        input_file = input("Enter the path of the input file: ")
+        input_file = input("Enter the path of the input file: ").strip('\'"')
         output_file = "output.json"
         converter.convert_to_json(choice, input_file, output_file)
     else:
